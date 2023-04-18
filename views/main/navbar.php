@@ -19,6 +19,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Favicon -->
     <link href="./public/img/layouts/favicon.ico" rel="icon">
 
@@ -143,7 +145,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.php" class="nav-item nav-link"  style="color: white !important">Home</a>
+                    <a href="index.php" class="nav-item nav-link"  style="color: white">Home</a>
                     <a href="index.php?page=main&controller=about&action=index" class="nav-item nav-link" style="color: white">Intro</a>
                     <a href="index.php?page=main&controller=archive&action=index" class="nav-item nav-link"  style="color: white">Achievements</a>
                     <a href="index.php?page=main&controller=services&action=index" class="nav-item nav-link"  style="color: white">Services</a>
