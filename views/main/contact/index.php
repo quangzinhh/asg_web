@@ -52,7 +52,7 @@ include_once('views/main/navbar.php');
                 <div class="phone"> 
                   <i class="bi bi-phone"></i>
                   <h4>Điện thoại:</h4>
-                  <p>0123456789</p>
+                  <p>0859007204</p>
                 </div>
               </div>  
               <hr>
