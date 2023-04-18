@@ -176,7 +176,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.php" class="nav-item nav-link"  style="color: white !important">Home</a>
-                    <a href="index.php?page=main&controller=layouts&action=index" class="nav-item nav-link" style="color: white; hover">Intro</a>
+                    <a href="index.php?page=main&controller=about&action=index" class="nav-item nav-link" style="color: white; hover">Intro</a>
                     <a href="index.php?page=main&controller=archive&action=index" class="nav-item nav-link"  style="color: white">Achievements</a>
                     <a href="index.php?page=main&controller=services&action=index" class="nav-item nav-link"  style="color: white">Services</a>
                     <a href="index.php?page=main&controller=blog&action=index" class="nav-item nav-link"  style="color: white">News</a>
