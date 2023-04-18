@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  @session_start();
   if (isset($_SESSION['guest']))
   {
     require_once('models/user.php');
@@ -49,7 +49,29 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet"/>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link href="./public/img/layouts/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="./public/js/layouts/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./public/js/layouts/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./public/css/layouts/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="./public/css/layouts/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -139,64 +161,56 @@
   ?>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;
+  <header id="header" style="position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;">
-  <div class="navbar-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/2560px-Bosch-logo.svg.png" style="max-height: 30px;" alt="logo"></div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php?page=main&controller=layouts&action=index">Home</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=main&controller=about&action=index">Intro</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=main&controller=archive&action=index">Achievements</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=main&controller=services&action=index">Service</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=main&controller=blog&action=index">News</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=main&controller=contact&action=index">Connections</a>
-      </li>
-    </ul>
-    <?php
-    if(isset($_SESSION['username'])) {
-      echo '<a class="nav-link" href="index.php?controller=editProfile&action=index">Edit Profile</a>';
-      echo '
-      <form method="post" class="form-inline my-2 my-lg-0">
-        <button type="submit" name="logout">Log out</button>
-      </form>';
-  } else {
-      // redirect user to login page if not logged in
-      echo '
-      <form class="form-inline my-2 my-lg-0">
-        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="index.php?page=main&controller=login&action=index">Login</a>
-      </form>';
-  }
-  if (isset($_POST['logout'])) {
-    // Unset all session variables
-    $_SESSION = array();
-  
-    session_unset();
-    // Destroy session
-    session_destroy();
-  
-    // Redirect the user to the login page
-    header("Location: index.php");
-  }
-    ?>
+  <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3 py-lg-0">
+            <a href="index.php" class="navbar-brand p-0">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/2560px-Bosch-logo.svg.png" alt="logo" style="max-height: 30px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.php" class="nav-item nav-link"  style="color: white !important">Home</a>
+                    <a href="index.php?page=main&controller=layouts&action=index" class="nav-item nav-link" style="color: white; hover">Intro</a>
+                    <a href="index.php?page=main&controller=archive&action=index" class="nav-item nav-link"  style="color: white">Achievements</a>
+                    <a href="index.php?page=main&controller=services&action=index" class="nav-item nav-link"  style="color: white">Services</a>
+                    <a href="index.php?page=main&controller=blog&action=index" class="nav-item nav-link"  style="color: white">News</a>
+                    <a href="index.php?page=main&controller=contact&action=index" class="nav-item nav-link"  style="color: white">Connections</a>
+                    <?php
+                      if(isset($_SESSION['username'])) {
+                        echo '<a class="nav-item nav-link" href="index.php?controller=editProfile&action=index">Edit Profile</a>';
+                        echo '
+                        <form method="post" class="form-inline my-2 my-lg-0" style="margin-left: 20px">
+                          <button type="submit" name="logout">Log out</button>
+                        </form>';
+                      } else {
+                          // redirect user to login page if not logged in
+                          echo '
+                          <form class="form-inline my-2 my-lg-0" style="margin-left: 20px">
+                            <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="index.php?page=main&controller=login&action=index">Login</a>
+                          </form>';
+                      }
+                      if (isset($_POST['logout'])) {
+                        // Unset all session variables
+                        $_SESSION = array();
+                      
+                        session_unset();
+                        // Destroy session
+                        session_destroy();
+                      
+                        // Redirect the user to the login page
+                        header("Location: index.php");
+                      }
+                    ?>
+                </div>
+            </div>
+        </nav>
   </div>
-</nav>
     
   </header><!-- End Header -->
 
