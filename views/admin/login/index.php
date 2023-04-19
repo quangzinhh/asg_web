@@ -63,7 +63,7 @@
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
 
-        <div class="card bg-glass">
+        <div class="card bg-glass my-5">
           <div class="card-body px-4 py-5 px-md-5">
 				<form action="index.php?page=admin&controller=login&action=check" method="post">
 				<div class="form-outline mb-4">
