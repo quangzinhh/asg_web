@@ -23,7 +23,7 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Thành tựu</h2>
-          <p>KMS đã đạt được gì?</p>
+          <p>Bosch đã đạt được gì?</p>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up">
