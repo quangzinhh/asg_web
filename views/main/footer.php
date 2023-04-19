@@ -38,12 +38,12 @@
                                 <h3 class="text-light mb-0">Popular Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Intro</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Achievements</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>News</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Connections</a>
+                                <a class="text-light mb-2" href="index.php"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="index.php?page=main&controller=about&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Intro</a>
+                                <a class="text-light mb-2" href="index.php?page=main&controller=archive&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Achievements</a>
+                                <a class="text-light mb-2" href="index.php?page=main&controller=services&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                                <a class="text-light mb-2" href="index.php?page=main&controller=blog&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>News</a>
+                                <a class="text-light" href="index.php?page=main&controller=contact&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Connections</a>
                             </div>
                         </div>
                     </div>
