@@ -1,6 +1,8 @@
 <?php
   include_once('views/main/navbar.php');
 ?>
+<!-- space -->
+  <div style="display: block; height: 34px"></div>
   <main id='main'>
      <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs"  style="background-color: #1E90FF;">
@@ -23,7 +25,7 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Thành tựu</h2>
-          <p>KMS đã đạt được gì?</p>
+          <p>Bosch đã đạt được gì?</p>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up">
