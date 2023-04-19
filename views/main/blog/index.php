@@ -48,7 +48,6 @@
                         <div class="blog-comments">
   
                           <h4 class="comments-count">' . count($news->comments) . ' Comments</h4>';
-                           <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
                           foreach ($news->comments as $comment)
                           {
                             echo '
