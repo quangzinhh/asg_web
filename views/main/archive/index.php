@@ -2,7 +2,7 @@
   include_once('views/main/navbar.php');
 ?>
 <!-- space -->
-  <div style="display: block; height: 34px"></div>
+<div style="display: block; height: 34px"></div>
   <main id='main'>
      <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs"  style="background-color: #1E90FF;">

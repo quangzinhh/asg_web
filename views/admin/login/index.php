@@ -1,8 +1,15 @@
-<?php
-  include_once('views/main/navbar.php');
-?>
-<section class="background-radial-gradient overflow-hidden">
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BOSCH COMPANY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="https://www.logolynx.com/images/logolynx/94/94174906fca1b19e84305fa6f5160ddb.png" rel="icon">
+
+   
+  <style>
     .background-radial-gradient {
       background-color: hsl(218, 41%, 15%);
       background-image: radial-gradient(650px circle at 0% 0%,
@@ -42,8 +49,15 @@
       background-color: hsla(0, 0%, 100%, 0.9) !important;
       backdrop-filter: saturate(200%) blur(25px);
     }
-  </style>
-<div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+</style>
+</head>
+<body>
+<?php
+  include_once('views/main/navbar.php');
+?>
+<section class="background-radial-gradient overflow-hidden">
+
+<div class="container-fluid  px-4 py-5 px-md-5 text-center text-lg-start my-5">
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
@@ -76,18 +90,16 @@
           Welcome back <br />
           <span style="color: hsl(218, 81%, 75%)">Login as administrator</span>
         </h1>
-        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Temporibus, expedita iusto veniam atque, magni tempora mollitia
-          dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-          ab ipsum nisi dolorem modi. Quos?
-        </p>
       </div>
     </div>
   </div>
 </section>
 
-
 <?php
   include_once('views/main/footer.php');
 ?>
+</body>
+</html>
+
+
+
