@@ -39,11 +39,7 @@
                                 <h3 class="text-light mb-0">Popular Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-<<<<<<< HEAD
                                 <a class="text-light mb-2" href="index.php?page=main&controller=layouts&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-=======
-                                <a class="text-light mb-2" href="index.php"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
->>>>>>> 9a567db2ceb754e8a6f1d32cfc7b67f779cf3015
                                 <a class="text-light mb-2" href="index.php?page=main&controller=about&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Intro</a>
                                 <a class="text-light mb-2" href="index.php?page=main&controller=archive&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Achievements</a>
                                 <a class="text-light mb-2" href="index.php?page=main&controller=services&action=index"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
