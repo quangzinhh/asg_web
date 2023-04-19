@@ -19,7 +19,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Favicon -->
     <link href="./public/img/layouts/favicon.ico" rel="icon">
@@ -129,6 +129,7 @@
   </div>';
   }
   ?>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" style="position: fixed;
