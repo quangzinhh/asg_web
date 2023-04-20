@@ -35,6 +35,20 @@
     <?php
   include_once('views/main/navbar.php');
 ?>
+<?php
+// Connect to database (replace dbname, username, password with your own info)
+$conn = new PDO("mysql:host=localhost;dbname=web", "root", "");
+
+// Retrieve data from services table
+$stmt = $conn->query("SELECT service_name, service_description, service_img FROM services");
+$services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $conn->query("SELECT services_place_name, services_place_description, services_place_img, services_place_button FROM services_place");
+$services_place = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $conn->query("SELECT services_info_name, services_info_description, services_info_img FROM services_info");
+$services_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+?>
     <div class="container-xxl bg-white p-0" style="margin-top: 100px;">
 
         <!-- Category Start -->
@@ -45,94 +59,19 @@
                     <p>From a single source — cutting-edge technologies from a global provider.</p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-apartment.png" alt="Icon">
+                    <?php foreach ($services as $service): ?>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <img class="img-fluid" src="<?php echo $service['service_img']; ?>" alt="Icon">
+                                    </div>
+                                    <h6><?php echo $service['service_name']; ?></h6>
+                                    <span><?php echo $service['service_description']; ?> ></span>
                                 </div>
-                                <h6>Product Authentication</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-villa.png" alt="Icon">
-                                </div>
-                                <h6>Carbon Neutrality</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-house.png" alt="Icon">
-                                </div>
-                                <h6>Commercial Buildings</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-housing.png" alt="Icon">
-                                </div>
-                                <h6>Airport Facilities</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-building.png" alt="Icon">
-                                </div>
-                                <h6>Automotive Industry</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-neighborhood.png" alt="Icon">
-                                </div>
-                                <h6>Entertainment Facilities</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-condominium.png" alt="Icon">
-                                </div>
-                                <h6>Hotel Facilities</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="./public/img/services/icon-luxury.png" alt="Icon">
-                                </div>
-                                <h6>Mining Facilities</h6>
-                                <span>Learn more ></span>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -151,46 +90,22 @@
                     </div>
                 </div>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
                         <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="./public/img/services/Convenience_Everywhere_1.webp" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Mobility</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-  <a class="d-block h5 mb-2" href="" style="margin: 0;">Our mobility offerings</a>
-</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <p>Bosch offers innovative mobility through vehicle technology, data cloud, and services.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="./public/img/services/Convenience_Everywhere_2.webp" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">At home</div>
-                                        <div  class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"><a class="d-block h5 mb-2" href="" style="margin: 0;">Our offerings for your home</a></div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <p>Bosch offers you individual solutions for your home to make life a bit easier every day.</p>
+                            <?php foreach ($services_place as $service): ?>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="property-item rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a href=""><img class="img-fluid" src="<?php echo $service['services_place_img']; ?>" alt=""></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"><?php echo $service['services_place_name']; ?></div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"><a class="d-block h5 mb-2" href="" style="margin: 0;"><?php echo $service['services_place_button']; ?></a></div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <p><?php echo $service['services_place_description']; ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="./public/img/services/Convenience_Everywhere_3.webp" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Industry and trades</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"><a class="d-block h5 mb-2" href="" style="margin: 0;">Our offerings for industry and trades</a></div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <p>Bosch offers innovative products and services for industry and trades.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
 
@@ -199,7 +114,31 @@
         </div>
         <!-- Property List End -->
         
-    
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">What else might be interesting for you?</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <?php foreach ($services_info as $service): ?>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="testimonial-item-in bg-white border rounded p-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="<?php echo $service['services_info_img']; ?>" style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1"><?php echo $service['services_info_name']; ?></h6>
+                                    </div>
+                                </div>
+                                <p><?php echo $service['services_info_description']; ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
@@ -209,13 +148,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./public/js/services/wow/wow.min.js"></script>
+    <script src="./public/js/services/easing/easing.min.js"></script>
+    <script src="./public/js/services/waypoints/waypoints.min.js"></script>
+    <script src="./public/js/services/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="./public/js/services/main.js"></script>
 </body>
 
 </html>

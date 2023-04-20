@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 19, 2022 lúc 12:29 PM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.2
+-- Host: 127.0.0.1
+-- Generation Time: Apr 20, 2023 at 08:39 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,15 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `web`
+-- Database: `web`
 --
-CREATE DATABASE IF NOT EXISTS `web` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `web`;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,10 +33,10 @@ CREATE TABLE `admin` (
   `init` varchar(255) DEFAULT '0',
   `createAt` datetime DEFAULT NULL,
   `updateAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`username`, `password`, `init`, `createAt`, `updateAt`) VALUES
@@ -50,7 +48,7 @@ INSERT INTO `admin` (`username`, `password`, `init`, `createAt`, `updateAt`) VAL
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -61,10 +59,10 @@ CREATE TABLE `comment` (
   `news_id` int(11) DEFAULT NULL,
   `user_id` varchar(255) DEFAULT NULL,
   `parent` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `comment`
+-- Dumping data for table `comment`
 --
 
 INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`, `parent`) VALUES
@@ -82,7 +80,7 @@ INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `company`
+-- Table structure for table `company`
 --
 
 CREATE TABLE `company` (
@@ -91,10 +89,10 @@ CREATE TABLE `company` (
   `address` varchar(1000) DEFAULT NULL,
   `createAt` datetime DEFAULT NULL,
   `updateAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `company`
+-- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
@@ -104,7 +102,7 @@ INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -114,10 +112,10 @@ CREATE TABLE `news` (
   `description` varchar(1000) DEFAULT NULL,
   `content` varchar(10000) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `status`, `date`, `description`, `content`, `title`) VALUES
@@ -127,7 +125,7 @@ INSERT INTO `news` (`id`, `status`, `date`, `description`, `content`, `title`) V
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -137,10 +135,10 @@ CREATE TABLE `product` (
   `description` varchar(1000) DEFAULT NULL,
   `content` varchar(10000) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `price`, `name`, `description`, `content`, `img`) VALUES
@@ -152,7 +150,77 @@ INSERT INTO `product` (`id`, `price`, `name`, `description`, `content`, `img`) V
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `service_name` text NOT NULL,
+  `service_description` text NOT NULL,
+  `service_img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`service_name`, `service_description`, `service_img`) VALUES
+('Product Authentication', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Carbon Neutrality', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Commercial Buildings', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Airport Facilities', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Automotive Industry', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Entertainment Facilities', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Hotel Facilities', 'Learn more >', './public/img/services/icon-apartment.png'),
+('Mining Facilities', 'Learn more >', './public/img/services/icon-apartment.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services_info`
+--
+
+CREATE TABLE `services_info` (
+  `services_info_name` text NOT NULL,
+  `services_info_description` text NOT NULL,
+  `services_info_img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `services_info`
+--
+
+INSERT INTO `services_info` (`services_info_name`, `services_info_description`, `services_info_img`) VALUES
+('Stories', 'Explore the fascinating world of technology and innovation and learn more about digitalization in industries, energy transition and smart infrastructure.', 'https://cdn-icons-png.flaticon.com/512/6081/6081056.png '),
+('Fairs & Events', 'Innovations for Tomorrow. Cutting-edge technology showcased at premier fairs and events worldwide. Experience excellence, efficiency, and sustainability.', 'https://cdn-icons-png.flaticon.com/512/2680/2680341.png'),
+('Investor Relations', 'Here you\'ll find capital market relevant information around our financial disclosure, our share, the AGM and Corporate Governance topics.', 'https://cdn-icons-png.flaticon.com/512/2329/2329158.png'),
+('Topic Areas', 'What are the most relevant topics for us? Discover our state-of-the-art solutions and ideas.', 'https://cdn-icons-png.flaticon.com/512/9111/9111567.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services_place`
+--
+
+CREATE TABLE `services_place` (
+  `services_place_name` text NOT NULL,
+  `services_place_description` text NOT NULL,
+  `services_place_img` text NOT NULL,
+  `services_place_button` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `services_place`
+--
+
+INSERT INTO `services_place` (`services_place_name`, `services_place_description`, `services_place_img`, `services_place_button`) VALUES
+('Mobility', 'Bosch offers innovative mobility through vehicle technology, data cloud, and services.', './public/img/services/Convenience_Everywhere_1.webp', 'Our mobility offerings'),
+('At home', 'Bosch offers you individual solutions for your home to make life a bit easier every day.', './public/img/services/Convenience_Everywhere_2.webp', 'Our offerings for your home'),
+('Industry and trades', 'Bosch offers innovative products and services for industry and trades.', './public/img/services/Convenience_Everywhere_3.webp', 'Our offerings for industry and trades');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -166,10 +234,10 @@ CREATE TABLE `user` (
   `createAt` datetime DEFAULT NULL,
   `updateAt` datetime DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `age`, `phone`, `createAt`, `updateAt`, `password`) VALUES
@@ -180,17 +248,17 @@ INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `age`,
 ('sangle@gmail.com', 'public/img/user/2022_06_19_08_59_18am.jpg', 'Lê', 'Sang', 1, 21, '123456789', '2022-06-19 13:58:29', '2022-06-19 13:59:18', '$2y$10$cZXL.spt3RUhpndKRl7FfeiMTbl2FZUCxcBcIfzYJ//JKkVbXyNEa');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`username`);
 
 --
--- Chỉ mục cho bảng `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
@@ -199,63 +267,63 @@ ALTER TABLE `comment`
   ADD KEY `parent` (`parent`);
 
 --
--- Chỉ mục cho bảng `company`
+-- Indexes for table `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`email`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT cho bảng `company`
+-- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `comment`
+-- Constraints for table `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
