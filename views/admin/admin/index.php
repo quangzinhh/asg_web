@@ -39,7 +39,7 @@ require_once('views/admin/content_layouts.php'); ?>
 	</section>
 	<!-- Main content-->
 	<section class="content">
-		<div class="container-fluid">
+		<div class="container-fluid ">
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
@@ -139,7 +139,7 @@ require_once('views/admin/content_layouts.php'); ?>
 										<form action="index.php?page=admin&controller=admin&action=delete" method="post">
 											<div class="modal-body">
 												<input type="hidden" name="username" />
-												<p>Bạn chắc chưa ?</p>
+												<p>Bạn chắc chắn muốn xóa admin này không ?</p>
 											</div>
 											<div class="modal-footer">
 												<button class="btn btn-danger btn-outline-light" type="button" data-dismiss="modal">Đóng lại</button>
