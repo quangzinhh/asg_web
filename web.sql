@@ -82,6 +82,8 @@ INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`
 --
 -- Table structure for table `company`
 --
+CREATE DATABASE IF NOT EXISTS `web` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `web`;
 
 CREATE TABLE `company` (
   `id` int(11) NOT NULL,
