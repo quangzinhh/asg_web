@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
+CREATE DATABASE IF NOT EXISTS `web` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `web`;
 
 CREATE TABLE `admin` (
   `username` varchar(255) NOT NULL,
@@ -194,7 +196,7 @@ CREATE TABLE `services_info` (
 INSERT INTO `services_info` (`services_info_name`, `services_info_description`, `services_info_img`) VALUES
 ('Stories', 'Explore the fascinating world of technology and innovation and learn more about digitalization in industries, energy transition and smart infrastructure.', 'https://cdn-icons-png.flaticon.com/512/6081/6081056.png '),
 ('Fairs & Events', 'Innovations for Tomorrow. Cutting-edge technology showcased at premier fairs and events worldwide. Experience excellence, efficiency, and sustainability.', 'https://cdn-icons-png.flaticon.com/512/2680/2680341.png'),
-('Investor Relations', 'Here you\'ll find capital market relevant information around our financial disclosure, our share, the AGM and Corporate Governance topics.', 'https://cdn-icons-png.flaticon.com/512/2329/2329158.png'),
+('Investor Relations', 'Here you will find capital market relevant information around our financial disclosure, our share, the AGM and Corporate Governance topics.', 'https://cdn-icons-png.flaticon.com/512/2329/2329158.png'),
 ('Topic Areas', 'What are the most relevant topics for us? Discover our state-of-the-art solutions and ideas.', 'https://cdn-icons-png.flaticon.com/512/9111/9111567.png');
 
 -- --------------------------------------------------------
