@@ -60,15 +60,16 @@
           <div class="card-body px-4 py-5 px-md-5">
 				<form action="index.php?page=main&controller=login&action=index" method="POST" class="login100-form validate-form">
         
-              <div class="form-outline mb-4">
+              <div class="form-outline mb-4"> 
+                    <label class="form-label" for="form3Example3">Email <span style="color: red">*</span></label>
                     <input type="text" name="username" required id="form3Example3" class="form-control" />
-                    <label class="form-label" for="form3Example3">Username</label>
                 </div>
 					
 					
 					<div class="form-outline mb-4">
+                <label class="form-label" for="form3Example4">Password <span style="color: red">*</span></label>
                 <input type="password" name="password" required id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
+                
               </div>
 					<?php
 

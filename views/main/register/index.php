@@ -1,7 +1,8 @@
 <?php
   include_once('views/main/navbar.php');
 ?>
-<section class="vh-100 bg-image"
+<div style="height: 3em;"></div>
+<section class="bg-image"
   style="background-image: radial-gradient(650px circle at 0% 0%,
           hsl(218, 41%, 35%) 15%,
           hsl(218, 41%, 30%) 35%,
@@ -15,6 +16,7 @@
           hsl(218, 41%, 19%) 80%,
           transparent 100%);
           ">
+		  <div style="height: 4em;"></div>
 <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -76,31 +78,31 @@
 						<label class="form-check-label">Female</label>
 					</div>
 					
-					<div class="d-flex justify-content-center">
+					<div class="d-flex justify-content-center mt-3">
                   <button type="submit"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" style="display: block;"> Register</button>
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" style="display: block; color: white !important"> Register</button>
                 </div>
 				
 					<p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="index.php?page=main&controller=login&action=index"
                     class="fw-bold text-body"><u>Login here</u></a></p>
 					
-			
-					
 				</form>
 
-				<div class="login100-more" style="background-size: 1000px; background-image: url('https://www.passerellesnumeriques.org/wp-content/uploads/2018/10/KMS-Technology.png');">
+				
 				</div>
 				</div>
+				
           </div>
         </div>
       </div>
+	  
     </div>
+	
   </div>
-
+  <div style="height: 5em;"></div>
 </section>
-	
-	
+
 
 <?php
-  include_once('views/main/navbar.php');
+  include_once('views/main/footer.php');
 ?>

@@ -1,7 +1,7 @@
 <?php
 $pages = array(
   'error' => ['errors'],
-  'main' => ['layouts', 'about', 'services', 'blog', 'archive', 'contact', 'login', 'register'],
+  'main' => ['layouts', 'about', 'services', 'blog', 'archive', 'contact', 'login', 'register', 'edit'],
   'admin' => ['layouts', 'members', 'products', 'news', 'comments']
 );
 $controllers = array(
@@ -19,6 +19,7 @@ $controllers = array(
 
   //Main controller
   'about' => ['index'],
+  'edit' => ['index'],
   'blog' => ['index'],
   'archive' => ['index'],
   'contact' => ['index'],

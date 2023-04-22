@@ -48,92 +48,6 @@
 </head>
 
 <body>
-
-<?php
-  if (isset($_SESSION['guest']))
-  {
-  echo '
-    <div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog" aria-labelledby="EditUserModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Chỉnh sửa</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
-        <form action="index.php?page=main&controller=register&action=editInfo" enctype="multipart/form-data" method="post">
-          <div class="modal-body">
-            <input type="hidden" name="email">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <div class="row"> </div>
-                  <label>Họ và tên lót</label>
-                  <input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" value="' . $data->fname . '"/>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <div class="row"> </div>
-                  <label>Tên</label>
-                  <input class="form-control" type="text" placeholder="Tên" name="lname" value="' . $data->lname . '"/>
-                </div>
-              </div>
-            </div>
-
-            <div class="row" style="margin-top: 5%;">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Tuổi</label>
-                  <input class="form-control" type="number" placeholder="Tuổi" name="age" value="' . $data->age . '"/>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Giới tính:</label>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender"' . (($data->gender == '1')?'checked':"") . ' value="1" />
-                        <label>Nam</label>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender"' . (($data->gender == '0')?'checked':"") . ' value="0" />
-                        <label>Nữ</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group" style="margin-top: 5%;">
-              <label>Số điện thoại</label>
-              <input class="form-control" type="number" placeholder="Số điện thoại" name="phone" value="' . $data->phone . '"/>
-            </div>
-            <div class="form-group" style="margin-top: 5%;">
-              <label>Hình ảnh hiện tại </label>
-              <img style="width: 90%; height: auto; margin: 5%" src="' . $data->profile_photo . '">
-              
-            </div>
-            <div class="form-group" style="margin-top: 5%;">
-              <label>Hình ảnh mới</label>&nbsp
-              <input type="file" name="fileToUpload" id="fileToUpload" />
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng lại</button>
-            <button class="btn btn-primary" type="submit">Cập nhật</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>';
-  }
-  ?>
-  
-
   <!-- ======= Header ======= -->
   <header id="header" style="position: fixed;
     top: 0;
@@ -163,7 +77,7 @@
                             </li>';
                         } else {
                             // redirect user to login page if not logged in
-                            echo '<li data-toggle="modal" data-target="#EditUserModal"> <a class="nav-item nav-link" href="index.php?controller=editProfile&action=index">Edit Profile</a></li>';
+                            echo '<a class="nav-item nav-link" href="index.php?page=main&controller=edit&action=index" style="color: white">Edit Profile</a>';
                             echo '
                               <li class="form-inline my-2 my-lg-0" style="margin-left: 20px">
                               <a href="index.php?page=main&controller=login&action=logout" class="btn btn-outline-danger my-2 my-sm-0">Log out</a>
