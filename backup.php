@@ -51,7 +51,7 @@
           <span style="color: hsl(218, 81%, 75%)">Choose your success</span>
         </h1>
       </div>
-      </div>
+        
       <div class="col-lg-6 mb-5 mb-lg-0 my-5 position-relative">
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>

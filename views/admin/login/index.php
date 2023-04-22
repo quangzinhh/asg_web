@@ -67,12 +67,12 @@
           <div class="card-body px-4 py-5 px-md-5">
 				<form action="index.php?page=admin&controller=login&action=check" method="post">
 				<div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Admin account <span style="color: red">*</span></label>
                     <input type="text" name="username" required id="form3Example3" class="form-control" />
-                    <label class="form-label" for="form3Example3">Admin account</label>
                 </div>
 				<div class="form-outline mb-4">
+                <label class="form-label" for="form3Example4">Password <span style="color: red">*</span></label>
                 <input type="password" name="password" required id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
               </div>
 			  <button type="submit" value="Login" class="btn btn-primary btn-block mb-4">
                 Log in
