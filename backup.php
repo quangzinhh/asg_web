@@ -51,26 +51,26 @@
           <span style="color: hsl(218, 81%, 75%)">Choose your success</span>
         </h1>
       </div>
-
+      </div>
       <div class="col-lg-6 mb-5 mb-lg-0 my-5 position-relative">
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
 
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-				<form action="index.php?page=main&controller=login&action=index" method="POST" class="login100-form validate-form">
-        
-              <div class="form-outline mb-4">
+            <form method="post" action="index.php?page=main&controller=login&action=index">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="form-outline mb-4">
                     <input type="text" name="username" required id="form3Example3" class="form-control" />
                     <label class="form-label" for="form3Example3">Username</label>
                 </div>
-					
-					
-					<div class="form-outline mb-4">
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
                 <input type="password" name="password" required id="form3Example4" class="form-control" />
                 <label class="form-label" for="form3Example4">Password</label>
               </div>
-					<?php
+              <?php
 
 					if (isset($err))
 					{
@@ -78,11 +78,14 @@
 						unset($err);
 					}
 					?>
-					<button value="Login" class="btn btn-primary btn-block mb-4" name="submit-btn">
+
+              <!-- Submit button -->
+              <button type="submit" value="Login" class="btn btn-primary btn-block mb-4">
                 Log in
               </button>
-				</form>
-        <div class="text-center">
+            </form>
+            <!-- Register buttons -->
+            <div class="text-center">
                 <p style="display: inline-block;">Don't have account yet?</p> <a href="index.php?page=main&controller=register&action=index">Sign up now</a>
               </div>
               <!-- Admin login button -->
@@ -95,7 +98,6 @@
     </div>
   </div>
 </section>
-
 <?php
 include_once('views/main/footer.php');
 ?>

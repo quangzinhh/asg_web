@@ -79,7 +79,7 @@ require_once('views/admin/content_layouts.php'); ?>
 									<tr class="text-center">
 										<th>STT</th>
 										<th>Tên đăng nhập</th>
-										<th>Cập nhật lần cuối</th>
+										<th>Thời gian khởi tạo</th>
 										<th>Thao tác</th>
 									</tr>
 								</thead>
@@ -90,7 +90,7 @@ require_once('views/admin/content_layouts.php'); ?>
 										echo "<tr class='text-center'>";
 										echo "<td>" . $index++ . "</td>";
 										echo "<td>" . $admin->username . "</td>";
-										echo "<td> " . date("h:i:sa-d/m/Y", strtotime($admin->updateAt)) . "</td>";
+										echo "<td>" . date('m/d/Y H:i:s', strtotime($admin->createAt)) . "</td>";
 										echo "<td>
 											<btn data-toggle='tooltip' data-placement='top' title='Chỉnh sửa' class='btn-edit btn btn-primary btn-xs' style='margin-right: 5px' data-username='$admin->username' data-password='$admin->password'> <i class='fas fa-edit'></i></btn>
 											<btn data-toggle='tooltip' data-placement='top' title='Xóa' class='btn-delete btn btn-danger btn-xs' style='margin-right: 5px' data-username='$admin->username'> <i class='fas fa-trash'></i></btn>

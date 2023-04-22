@@ -156,30 +156,19 @@
                       <a href="index.php?page=main&controller=blog&action=index" class="nav-item nav-link"  style="color: white">News</a>
                       <a href="index.php?page=main&controller=contact&action=index" class="nav-item nav-link"  style="color: white">Connections</a>
                       <?php
-                        if(isset($_SESSION['username'])) {
-                          echo '<a class="nav-item nav-link" href="index.php?controller=editProfile&action=index">Edit Profile</a>';
+                        if(!isset($_SESSION["guest"])) {
                           echo '
-                          <form method="post" class="form-inline my-2 my-lg-0" style="margin-left: 20px">
-                            <button type="submit" name="logout">Log out</button>
-                          </form>';
+                            <li class="form-inline my-2 my-lg-0" style="margin-left: 20px">
+                              <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="index.php?page=main&controller=login&action=index">Login</a>
+                            </li>';
                         } else {
                             // redirect user to login page if not logged in
+                            echo '<li data-toggle="modal" data-target="#EditUserModal"> <a class="nav-item nav-link" href="index.php?controller=editProfile&action=index">Edit Profile</a></li>';
                             echo '
-                            <form class="form-inline my-2 my-lg-0" style="margin-left: 20px">
-                              <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="index.php?page=main&controller=login&action=index">Login</a>
-                            </form>';
-                        }
-                        if (isset($_POST['logout'])) {
-                          // Unset all session variables
-                          $_SESSION = array();
-                        
-                          session_unset();
-                          // Destroy session
-                          session_destroy();
-                        
-                          // Redirect the user to the login page
-                          header("Location: index.php");
-                        }
+                              <li class="form-inline my-2 my-lg-0" style="margin-left: 20px">
+                              <a href="index.php?page=main&controller=login&action=logout" class="btn btn-outline-danger my-2 my-sm-0">Log out</a>
+                              </li>';
+                          }
                       ?>
                   </div>
               </div>
