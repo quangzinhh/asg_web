@@ -51,39 +51,12 @@ $services_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     <div class="container-xxl bg-white p-0" style="margin-top: 100px;">
 
-        <!-- Category Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Market-specific solutions</h1>
-                    <p>From a single source — cutting-edge technologies from a global provider.</p>
-                </div>
-                <div class="row g-4">
-                    <?php foreach ($services as $service): ?>
-                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                                <div class="rounded p-4">
-                                    <div class="icon mb-3">
-                                        <img class="img-fluid" src="<?php echo $service['service_img']; ?>" alt="Icon">
-                                    </div>
-                                    <h6><?php echo $service['service_name']; ?></h6>
-                                    <span><?php echo $service['service_description']; ?> ></span>
-                                </div>
-                            </a>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-        <!-- Category End -->
-
-
-        <!-- Property List Start -->
-        <div class="container-xxl py-5">
+                <!-- Property List Start -->
+                <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-0 gx-5 align-items-end">
-                    <div class="col-lg-6">
-                        <div class="text-center mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                    <div class="container">
+                        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
                             <h1 class="mb-3">Convenience Everywhere</h1>
                             <p>In your car, at home, or at work — Bosch technology shapes many areas of life.</p>
                         </div>
@@ -114,6 +87,34 @@ $services_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <!-- Property List End -->
         
+        <!-- Category Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Market-specific solutions</h1>
+                    <p>From a single source — cutting-edge technologies from a global provider.</p>
+                </div>
+                <div class="row g-4">
+                    <?php foreach ($services as $service): ?>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <img class="img-fluid" src="<?php echo $service['service_img']; ?>" alt="Icon">
+                                    </div>
+                                    <h6><?php echo $service['service_name']; ?></h6>
+                                    <span><?php echo $service['service_description']; ?> ></span>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <!-- Category End -->
+
+
+
         <!-- Testimonial Start -->
         <div class="container-xxl py-5">
             <div class="container">
