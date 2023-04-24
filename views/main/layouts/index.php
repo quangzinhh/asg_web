@@ -141,7 +141,9 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    
+    <!-- JavaScript Libraries -->
+    <script src="./public/js/layouts/counterup/counterup.min.js"></script>
+    <script src="./public/js/layouts/main.js"></script>
 </body>
 
 </html>
