@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 22, 2023 at 10:58 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th4 24, 2023 lúc 08:21 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,59 +18,14 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web`
+-- Cơ sở dữ liệu: `web`
 --
 CREATE DATABASE IF NOT EXISTS `web` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `web`;
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `achievements_awards`
---
-
-CREATE TABLE `achievements_awards` (
-  `achievements_awards_name` text NOT NULL,
-  `achievements_awards_description` text NOT NULL,
-  `achievements_awards_src` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `achievements_awards`
---
-
-INSERT INTO `achievements_awards` (`achievements_awards_name`, `achievements_awards_description`, `achievements_awards_src`) VALUES
-('Dishwasher Awards', 'America\'s Most Trusted&reg; Dishwasher 5 Years in a Row 2019-2023*', './public/img/achievements/awardB-01.jpg'),
-('Refrigeration Awards', 'America’s Most Trusted® Refrigerator 5 Years in a Row 2019-2023* by Lifestory Research', './public/img/achievements/awardB-02.jpg'),
-('GH Best Products Award', 'Good Housekeeping Best Tested Products 2021 Award', './public/img/achievements/awardB-03.jpg'),
-('Cooktop Awards', 'Good Housekeeping Best Kitchen Gear 2021 Award', './public/img/achievements/awardB-04.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `achievements_main`
---
-
-CREATE TABLE `achievements_main` (
-  `achievements_main_name` text NOT NULL,
-  `achievements_main_description` text NOT NULL,
-  `achievements_main_src` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `achievements_main`
---
-
-INSERT INTO `achievements_main` (`achievements_main_name`, `achievements_main_description`, `achievements_main_src`) VALUES
-('Partner of the Year Award!', 'Bosch earns 2023 ENERGY STAR® Partner of the Year Award!', './public/img/achievements/baner-right-image-01.jpg'),
-('America’s Most Trusted®', 'America’s Most Trusted® Kitchen Brand 5 Years in a Row 2019-2023*', './public/img/achievements/baner-right-image-02.jpg'),
-('IF Design Award', 'Bosch Industrial-Style Range awarded 2022 IF Design Award', './public/img/achievements/baner-right-image-03.jpg'),
-('Company of the Year', 'Bosch Wins Connected Home Company of the Year Award.', './public/img/achievements/baner-right-image-04.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
+-- Cấu trúc bảng cho bảng `admin`
 --
 
 CREATE TABLE `admin` (
@@ -82,7 +37,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `admin`
+-- Đang đổ dữ liệu cho bảng `admin`
 --
 
 INSERT INTO `admin` (`username`, `password`, `init`, `createAt`, `updateAt`) VALUES
@@ -95,7 +50,7 @@ INSERT INTO `admin` (`username`, `password`, `init`, `createAt`, `updateAt`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comment`
+-- Cấu trúc bảng cho bảng `comment`
 --
 
 CREATE TABLE `comment` (
@@ -109,7 +64,7 @@ CREATE TABLE `comment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `comment`
+-- Đang đổ dữ liệu cho bảng `comment`
 --
 
 INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`, `parent`) VALUES
@@ -123,7 +78,7 @@ INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `company`
+-- Cấu trúc bảng cho bảng `company`
 --
 
 CREATE TABLE `company` (
@@ -135,7 +90,7 @@ CREATE TABLE `company` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `company`
+-- Đang đổ dữ liệu cho bảng `company`
 --
 
 INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
@@ -145,7 +100,7 @@ INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Cấu trúc bảng cho bảng `news`
 --
 
 CREATE TABLE `news` (
@@ -158,7 +113,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `news`
+-- Đang đổ dữ liệu cho bảng `news`
 --
 
 INSERT INTO `news` (`id`, `status`, `date`, `description`, `content`, `title`) VALUES
@@ -172,7 +127,7 @@ INSERT INTO `news` (`id`, `status`, `date`, `description`, `content`, `title`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Cấu trúc bảng cho bảng `product`
 --
 
 CREATE TABLE `product` (
@@ -185,89 +140,18 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `product`
+-- Đang đổ dữ liệu cho bảng `product`
 --
 
 INSERT INTO `product` (`id`, `price`, `name`, `description`, `content`, `img`) VALUES
-(1, 0, 'Katalon', 'Katalon Studio là một giải pháp kiểm thử tự động được phát triển bởi Katalon LLC.', 'Phần mềm này được xây dựng dựa trên các khung tự động hóa nguồn mở Selenium, Appium với giao diện IDE chuyên dụng để kiểm thử ứng dụng web, API, di động và máy tính để bàn. Bản phát hành đầu tiên để sử dụng nội bộ là vào tháng 1 năm 2015. Bản phát hành công khai đầu tiên là vào tháng 9 năm 2016. Năm 2018, phần mềm đã giành được 9% thâm nhập thị trường trong lĩnh vực kiểm thử tự động giao diện người dùng, theo Báo cáo về tình hình kiểm thử năm 2018 của SmartBear.\r\n\r\nKatalon được công nhận là Sự lựa chọn của khách hàng trong lĩnh vực kiểm thử tự động phần mềm của Gartner Peer Insights tháng 3 năm 2019 và tháng 3 năm 2020.', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Katalon-logo-vector.svg/1200px-Katalon-logo-vector.svg.png'),
-(2, 50000, 'Kobiton', '“Kobiton là công ty duy nhất trên thị trường có khả năng kết hợp việc kiểm thử trên các thiết bị thực với giải pháp tự động hóa”', 'Kobiton là startup phần mềm được sáng lập năm 2016 từ đội ngũ lãnh đạo và kỹ sư người Việt thuộc KMS Technology, và đang có hơn 120 nhân viên tại Việt Nam và Atlanta (Mỹ). Họ phát triển giải pháp kiểm thử phần mềm trên thiết bị di động duy nhất cung cấp đầy đủ điều kiện cần thiết để doanh nghiệp có thể phát hành ứng dụng di động ra thị trường nhanh chóng.\nQuá trình kiểm thử phần mềm được thực hiện trên các thiết bị di động thực, hỗ trợ khách hàng trên toàn cầu ở nhiều quy mô, từ các doanh nghiệp “kỳ lân” cho đến các công ty blue-chip, đáp ứng yêu cầu của nhiều lĩnh vực như bán lẻ, giải trí, dịch vụ tài chính, sáng tạo và ngành du lịch.\n\nĐến đầu năm nay, Kobiton đã đạt mốc hơn 50.000 người dùng trên toàn cầu. Nhờ vào việc ứng dụng công nghệ AI và việc sáp nhập gần đây cùng Mobile Labs, Kobiton đã đạt mức tăng trưởng 250% so với cùng kỳ năm trước.\n\n', 'https://theme.zdassets.com/theme_assets/292254/86844d094285d4818cfd9bbb1c0c1bedea95b65d.png'),
-(3, 25000, 'Grove', 'Bạn đang quản lý nhân sự hay quản lý giấy tờ?', 'Trải nghiệm FREE phần mềm quản trị nhân sự toàn diện trong 2 tháng\nBạn dành phần lớn thời gian để tìm kiếm, sắp xếp, tổng hợp dữ liệu trên các tập tin Excel, spreadsheet khác nhau. Hay bạn dành thời gian để lên kế hoạch, trình bày báo cáo, đưa ra những quyết định chiến lược và xây dựng đội ngũ làm việc gắn kết, hiệu quả cao.\n\nGrove HR tin rằng với một giải pháp nhân sự hiện đại và đồng bộ hoá, quản lý giấy tờ sẽ không còn là gánh nặng. Bạn sẽ có thời gian để tập trung vào việc quan trọng nhất - phát triển nguồn nhân lực! Trải nghiệm ngay giải pháp nhân sự toàn diện Grove HR.\nGrove HR là sản phẩm HR được phát triển và xây dựng bởi công ty công nghệ hàng đầu - KMS Technology. Với mục tiêu giúp các doanh nghiệp tại Việt Nam phát triển tối ưu, Grove HR “số hoá\" các bài toán nhân sự.', 'https://c.smartrecruiters.com/sr-company-images-prod/58cbb8d5e4b0867c17f57588/699da839-5f7d-45c3-8810-8c86dca65287_social_logo/300x300?r=s3&_1621408203503'),
-(4, 25000, 'Visily', 'Visily là một phần mềm thiết kế giao diện sản phẩm (UI – user interface)', 'Visily là một phần mềm thiết kế giao diện sản phẩm (UI – user interface) dành cho người dùng không chuyên, tập trung vào câu chuyện hỗ trợ người dùng thiết kế dễ dàng với các tính năng sử dụng sức mạnh của trí thông minh nhân tạo (AI – artificial intelligence). Sau 6 tháng ở giai đoạn thử nghiệm, Visily cũng đã cho ra mắt phiên bản chính thức đầu tiên của mình vào tháng 5/2022.\n\nVới một giao diện trực quan, cùng với thư viện thiết kế phong phú và các tính năng sử dụng sức mạnh của trí thông minh nhân tạo, Visily đã giúp hàng nghìn người dùng ở các vị trí khác nhau trong các đội ngũ xây dựng và phát triển sản phẩm tạo nên những mockup giao diện ứng dụng một cách dễ dàng.', 'https://prices.vn/photos/banner/1639114098-ma-giam-gia-visily.png');
+(7, 0, 'Bosch Automotive Aftermarket', 'Bosch giúp bạn luôn di động.', 'Bosch cung cấp nhiều phụ tùng thay thế khác nhau cho các cửa hàng phụ tùng aftermarket và cửa hàng sửa chữa - từ các bộ phận mới và đổi trả cho đến các giải pháp sửa chữa - cũng như các thiết bị của cửa hàng sửa chữa như phần mềm chẩn đoán và phần cứng. Với các khóa đào tạo nhân viên và các chương trình đối tác cho các cửa hàng sửa chữa, Bosch cung cấp các kiến thức và kỹ năng bảo dưỡng ô tô cho các kỹ thuật viên dịch vụ trên toàn thế giới. Do đó, các cửa hàng sửa chữa có thể kiểm tra và sửa chữa hiệu quả, an toàn và nhanh chóng hơn.', 'public/img/products/2023_04_24_08_02_30am.png'),
+(8, 0, 'Trung tâm Dịch vụ Ô tô Bosch', 'Dịch vụ ô tô toàn cầu của Bosh', 'Tại hơn 17.000 trung tâm dịch vụ ô tô Bosch, chúng tôi đem đến dịch vụ chất lượng hàng đầu, thế mạnh chuyên môn và phụ tùng ô tô đạt chuẩn chất lượng. Từ công nghệ cơ khí, điện tử cho đến công nghệ diesel – các chuyên gia của chúng tôi luôn làm việc với kỹ thuật kiểm tra tiên tiến.', 'public/img/products/2023_04_24_08_05_00pm.png'),
+(9, 0, 'Xe hai bánh và xe mô tô thể thao', 'Xe hai bánh và xe mô tô thể thao của Bosch', 'Năng động, an toàn, mang tính kết nối và có thể tùy chỉnh: Đây thường là những yêu cầu chủ yếu khi nhắc đến trải nghiệm lái xe tuyệt vời nhất với xe hai bánh và xe mô tô thể thao. Với công nghệ tiên tiến và phần mềm thông minh, Bosch cung cấp các giải pháp kết nối, hỗ trợ người lái xe, hệ thống truyền động và giải pháp vận chuyển được cá nhân hóa. Tất cả đều đến từ một nguồn duy nhất.', 'public/img/products/2023_04_24_08_05_59pm.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
---
-
-CREATE TABLE `services` (
-  `service_name` text NOT NULL,
-  `service_description` text NOT NULL,
-  `service_img` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `services`
---
-
-INSERT INTO `services` (`service_name`, `service_description`, `service_img`) VALUES
-('Product Authentication', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Carbon Neutrality', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Commercial Buildings', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Airport Facilities', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Automotive Industry', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Entertainment Facilities', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Hotel Facilities', 'Learn more >', './public/img/services/icon-apartment.png'),
-('Mining Facilities', 'Learn more >', './public/img/services/icon-apartment.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `services_info`
---
-
-CREATE TABLE `services_info` (
-  `services_info_name` text NOT NULL,
-  `services_info_description` text NOT NULL,
-  `services_info_img` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `services_info`
---
-
-INSERT INTO `services_info` (`services_info_name`, `services_info_description`, `services_info_img`) VALUES
-('Stories', 'Explore the fascinating world of technology and innovation and learn more about digitalization in industries, energy transition and smart infrastructure.', 'https://cdn-icons-png.flaticon.com/512/6081/6081056.png '),
-('Fairs & Events', 'Innovations for Tomorrow. Cutting-edge technology showcased at premier fairs and events worldwide. Experience excellence, efficiency, and sustainability.', 'https://cdn-icons-png.flaticon.com/512/2680/2680341.png'),
-('Investor Relations', 'Here you will find capital market relevant information around our financial disclosure, our share, the AGM and Corporate Governance topics.', 'https://cdn-icons-png.flaticon.com/512/2329/2329158.png'),
-('Topic Areas', 'What are the most relevant topics for us? Discover our state-of-the-art solutions and ideas.', 'https://cdn-icons-png.flaticon.com/512/9111/9111567.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `services_place`
---
-
-CREATE TABLE `services_place` (
-  `services_place_name` text NOT NULL,
-  `services_place_description` text NOT NULL,
-  `services_place_img` text NOT NULL,
-  `services_place_button` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `services_place`
---
-
-INSERT INTO `services_place` (`services_place_name`, `services_place_description`, `services_place_img`, `services_place_button`) VALUES
-('Mobility', 'Bosch offers innovative mobility through vehicle technology, data cloud, and services.', './public/img/services/Convenience_Everywhere_1.webp', 'Our mobility offerings'),
-('At home', 'Bosch offers you individual solutions for your home to make life a bit easier every day.', './public/img/services/Convenience_Everywhere_2.webp', 'Our offerings for your home'),
-('Industry and trades', 'Bosch offers innovative products and services for industry and trades.', './public/img/services/Convenience_Everywhere_3.webp', 'Our offerings for industry and trades');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
@@ -284,7 +168,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
 INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `age`, `phone`, `createAt`, `updateAt`, `password`) VALUES
@@ -293,17 +177,17 @@ INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `age`,
 ('vinh.dangquang03@hcmut.edu.vn', 'public/img/user/2023_04_22_08_05_40pm.jpg', 'Đặng Quang', 'Vinh', 1, 20, '0704833644', '2023-04-22 20:23:23', '2023-04-23 01:05:40', '$2y$10$3jGkRsV5PvDFEbh1488AguInIHWg5lxp7S49LKIXYIvSxvE0zDpCu');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `admin`
+-- Chỉ mục cho bảng `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indexes for table `comment`
+-- Chỉ mục cho bảng `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
@@ -312,63 +196,63 @@ ALTER TABLE `comment`
   ADD KEY `parent` (`parent`);
 
 --
--- Indexes for table `company`
+-- Chỉ mục cho bảng `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `news`
+-- Chỉ mục cho bảng `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `product`
+-- Chỉ mục cho bảng `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT for table `company`
+-- AUTO_INCREMENT cho bảng `company`
 --
 ALTER TABLE `company`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `news`
+-- AUTO_INCREMENT cho bảng `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `comment`
+-- Các ràng buộc cho bảng `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

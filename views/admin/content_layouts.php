@@ -84,13 +84,13 @@
 						<li class="nav-item">
 							<a class="nav-link" href="index.php?page=admin&controller=user&action=index">
 								<i class="nav-icon fas fa-users-cog"></i>
-								<p>Liên hệ khách hàng</p>
+								<p>Danh sách User</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="index.php?page=admin&controller=products&action=index">
 								<i class="nav-icon fas fa-cube"></i>
-								<p>Quản lý Sản phẩm</p>
+								<p>Quản lý dịch vụ</p>
 							</a>
 						</li>
 						<li class="nav-item">
