@@ -1,197 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Bosch</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-	<!-- Additional CSS Files -->
-	<link rel="stylesheet" type="text/css" href="./public/css/achievements/bootstrap.min.css">
-
-	<link rel="stylesheet" type="text/css" href="./public/css/achievements/font-awesome.css">
-
-	<link rel="stylesheet" href="./public/css/achievements/style.css">
-
-	<link rel="stylesheet" href="./public/css/achievements/owl-carousel.css">
-
-	<link rel="stylesheet" href="./public/css/achievements/lightbox.css">
-
-</head>
-
-<body>
-    <?php
+<?php
   include_once('views/main/navbar.php');
 ?>
+  <main id='main'>
+     <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs"  style="background-color: #1E90FF;">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 style="color: white;"><strong>THÀNH TỰU</strong></h1>
+          <ol>
+            <li><a style="color: white;" href="index.php?page=main&controller=layouts&action=index">Trang chủ</a></li>
+            <li><a style="color: white;" href="index.php?page=main&controller=archive&action=index">Thành tựu</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Thành tựu</h2>
+          <p>KMS đã đạt được gì?</p>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="https://blog.kms-solutions.asia/hubfs/Telecommunication%20and%20ICT%20-%20KMS%20Solutions.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Giải thưởng Fast Enterprise tại APEA</h4>
+              <p>2021</p>
+              <a href="https://blog.kms-solutions.asia/hubfs/Telecommunication%20and%20ICT%20-%20KMS%20Solutions.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Cuối tháng 12/2021, KMS Solutions được gọi tên tại giải thưởng APEA danh giá ở hạng mục “Doanh nghiệp Tăng trưởng nhanh” cùng với Nova Consumer Group, SCB, Yuanta Securities, và Danh Khoi Group. Được biết, để nhận được đề cử trên, KMS phải trải qua nhiều vòng đánh giá gắt gao dựa trên các tiêu chí như chiến lược phát triển, năng lực lãnh đạo, mức tăng trưởng doanh thu, và trách nhiệm cộng đồng."><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="https://www.kms-technology.com/wp-content/uploads/2021/04/processed-1024x691.jpeg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Giải thưởng Sao Khuê</h4>
+              <p>2021</p>
+              <a href="https://www.kms-technology.com/wp-content/uploads/2021/04/processed-1024x691.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="2021 đánh dấu năm thứ 10 KMS được chọn là “ngôi sao” của chuyển đổi số Việt Nam tại lễ trao giải Sao Khuê—một trong những giải thưởng lâu đời, uy tín, và cao quý nhất của ngành CNTT Việt Nam."><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="https://static.recruitery.co/uploads/images/Doanh%20nghi%E1%BB%87p%20n%C3%A0o%20%C4%91ang%20tuy%E1%BB%83n%20tr%C3%AAn%20Recruitery%20thu%E1%BB%99c%20TOP%20115%20n%C6%A1i%20l%C3%A0m%20vi%E1%BB%87c%20t%E1%BB%91t%20nh%E1%BA%A5t%20Ch%C3%A2u%20%C3%81%202021%20-%20Recruitery_20211012155421.jpeg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Nơi làm việc tốt nhất Châu Á</h4>
+              <p>2021</p>
+              <a href="https://static.recruitery.co/uploads/images/Doanh%20nghi%E1%BB%87p%20n%C3%A0o%20%C4%91ang%20tuy%E1%BB%83n%20tr%C3%AAn%20Recruitery%20thu%E1%BB%99c%20TOP%20115%20n%C6%A1i%20l%C3%A0m%20vi%E1%BB%87c%20t%E1%BB%91t%20nh%E1%BA%A5t%20Ch%C3%A2u%20%C3%81%202021%20-%20Recruitery_20211012155421.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Năm 2021, KMS vượt qua 581 hồ sơ doanh nghiệp ở Việt Nam để nhận giải thưởng “Best Companies to Work for in Asia - Nơi làm việc tốt nhất châu Á”, một để cử quốc tế, được HR Asia tổ chức thường niên nhằm đánh giá trải nghiệm nhân viên và vinh danh những môi trường làm việc hàng đầu trong khu vực."><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="http://www.vinasa.org.vn/Anhdaidien/vt-fpt-1403-9425.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Top 10 doanh nghiệp ICT Việt Nam</h4>
+              <p>2021</p>
+              <a href="http://www.vinasa.org.vn/Anhdaidien/vt-fpt-1403-9425.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Top 10 doanh nghiệp ICT 2021” vinh danh KMS tại đề cử “Doanh nghiệp Gia công Xuất khẩu Phần mềm Hàng đầu Việt Nam”."><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+  </main><!-- End #main -->
 <?php
-$conn = new mysqli("localhost", "root", "", "web");
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-// Select data from the "achievements_main" table
-$sql = "SELECT achievements_main_name, achievements_main_description, achievements_main_src FROM achievements_main";
-$result = $conn->query($sql);
-$sql2 = "SELECT achievements_awards_name, achievements_awards_description, achievements_awards_src FROM achievements_awards";
-$result2 = $conn->query($sql2);
-
+include_once('views/main/footer.php');
 ?>
-<div style="margin-top: -30px;">
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-content">
-                        <div class="thumb">
-                            <div class="inner-content">
-                                <h4 style="text-align: center">Our Awards are Your Rewards.</h4>
-                                <span>Our award-winning products reward customers daily with their dependability, efficiency and ease-of-use.</span>
-                                <div class="main-border-button">
-                                    <a href="#">Discover More</a>
-                                </div>
-                            </div>
-                            <img src="./public/img/achievements/left-banner-image.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-				<div class="col-lg-6">
-					<div class="right-content">
-					<?php
-					foreach($result as $row) {
-						echo '
-						<div class="row"	>
-							<div class="col-lg-6">
-							<div class="right-first-image">
-								<div class="thumb">
-								<div class="inner-content">
-									<h4>Award</h4>
-									<span>' . $row["achievements_main_name"]. '</span>
-								</div>
-								<div class="hover-content">
-									<div class="inner">
-									<h4>' . $row["achievements_main_name"]. '</h4>
-									<p>' . $row["achievements_main_description"]. '</p>
-									<div class="main-border-button">
-										<a href="#">Discover More</a>
-									</div>
-									</div>
-								</div>
-								<img src="' . $row["achievements_main_src"]. '">
-								</div>
-							</div>
-							</div>
-						</div>
-						';
-					}
-						?>
-					</div>
-				</div>
-
-            </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
-
-    <!-- ***** Men Area Starts ***** -->
-    <section class="section" id="awardB">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-heading">
-                        <h2>Awards & Accolades for Bosch Home Appliances</h2>
-                        <span>Bosch Home Appliances has won numerous awards for their innovative product design, energy efficiency, reliability, and cutting-edge technology.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-				<div class="awardB-item-carousel"><div class="owl-men-item owl-carousel">
-				<?php
-				foreach($result2 as $row2) {
-					echo '<div class="item">
-							<div class="thumb">
-							<div class="hover-content">
-								<a href="#">
-								<span style="background-color: #091E3E; color: white; padding: 3px 6px; font-size: 13px; font-weight: bold; border-radius: 3px;">
-									'.$row2["achievements_awards_description"].'
-								</span>
-								</a>
-							</div>
-							<img src="'.$row2["achievements_awards_src"].'" alt="">
-							</div>
-							<div style="text-align: center;">
-							<div class="down-content" style="display: inline-block; text-align: left;">
-								<h4>'.$row2["achievements_awards_name"].'</h4>
-							</div>
-							</div>
-						</div>';
-				}
-				echo '</div></div>';
-				?>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Men Area Ends ***** -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-</div>
-    <?php
-        include_once('views/main/footer.php');
-    ?>
-
-    <!-- jQuery -->
-    <script src="./public/js/achievements/jquery-2.1.0.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="./public/js/achievements/popper.js"></script>
-    <script src="./public/js/achievements/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="./public/js/achievements/owl-carousel.js"></script>
-    <script src="./public/js/achievements/accordions.js"></script>
-    <script src="./public/js/achievements/datepicker.js"></script>
-    <script src="./public/js/achievements/scrollreveal.min.js"></script>
-    <script src="./public/js/achievements/waypoints.min.js"></script>
-    <script src="./public/js/achievements/jquery.counterup.min.js"></script>
-    <script src="./public/js/achievements/imgfix.min.js"></script> 
-    <script src="./public/js/achievements/slick.js"></script> 
-    <script src="./public/js/achievements/lightbox.js"></script> 
-    <script src="./public/js/achievements/isotope.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="./public/js/achievements/custom.js"></script>
-
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
-</body>
-
-</html>
