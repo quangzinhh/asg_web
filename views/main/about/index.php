@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>BOSCH COMPANY</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="./public/img/layouts/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="./public/js/layouts/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="./public/js/layouts/animate/animate.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="./public/css/layouts/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="./public/css/layouts/style.css" rel="stylesheet">
-</head>
-
-<body>
-   
 <?php
   include_once('views/main/navbar.php');
 ?>
+<main id='main'>
     <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0">
+    <div class="container-fluid facts py-5 pt-lg-0" style= "margin-top: 8em">
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
@@ -75,10 +41,10 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
-                        <h1 class="mb-0">Bốn lĩnh vực kinh doanh, một mục tiêu: xây dựng tương lai</h1>
-                    </div>
+                        <div class="section-title position-relative pb-3 mb-5" style="text-align:center">
+                            <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+                            <h1 class="mb-0">Bốn lĩnh vực kinh doanh, một mục tiêu: xây dựng tương lai</h1>
+                        </div>
                     <p class="mb-4">Bosch là một công ty hàng đầu về công nghệ và dịch vụ. Hãy xem bạn có thể thiết lập nên những cột mốc kỹ thuật mới trong lĩnh vực nào.</p>
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
@@ -242,24 +208,14 @@
     </div>
     <!-- Service End -->
 
-    <?php
-    include_once('views/main/footer.php');
-    ?>
+    
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./public/js/layouts/wow/wow.min.js"></script>
-    <script src="./public/js/layouts/easing/easing.min.js"></script>
-    <script src="./public/js/layouts/waypoints/waypoints.min.js"></script>
     <script src="./public/js/layouts/counterup/counterup.min.js"></script>
-    <script src="./public/js/layouts/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="./public/js/layouts/main.js"></script>
-</body>
-
-</html>
+</main>
+    <?php
+    include_once('views/main/footer.php');
+    ?>
