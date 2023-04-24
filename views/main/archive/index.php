@@ -1,197 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Bosch</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-	<!-- Additional CSS Files -->
-	<link rel="stylesheet" type="text/css" href="./public/css/achievements/bootstrap.min.css">
-
-	<link rel="stylesheet" type="text/css" href="./public/css/achievements/font-awesome.css">
-
-	<link rel="stylesheet" href="./public/css/achievements/style.css">
-
-	<link rel="stylesheet" href="./public/css/achievements/owl-carousel.css">
-
-	<link rel="stylesheet" href="./public/css/achievements/lightbox.css">
-
-</head>
-
-<body>
-    <?php
+<?php
   include_once('views/main/navbar.php');
 ?>
-<?php
-$conn = new mysqli("localhost", "root", "", "web");
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-// Select data from the "achievements_main" table
-$sql = "SELECT achievements_main_name, achievements_main_description, achievements_main_src FROM achievements_main";
-$result = $conn->query($sql);
-$sql2 = "SELECT achievements_awards_name, achievements_awards_description, achievements_awards_src FROM achievements_awards";
-$result2 = $conn->query($sql2);
-
-?>
-<div style="margin-top: -30px;">
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-content">
-                        <div class="thumb">
-                            <div class="inner-content">
-                                <h4 style="text-align: center">Our Awards are Your Rewards.</h4>
-                                <span>Our award-winning products reward customers daily with their dependability, efficiency and ease-of-use.</span>
-                                <div class="main-border-button">
-                                    <a href="#">Discover More</a>
+    <div class="container-fluid py-5 wow fadeInUp my-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Achievements</h5>
+                <h1 class="mb-0">Our Accomplishments Benefit Your Bottom Line</h1>
+            </div>
+            <div class="container-fluid facts py-5 pt-lg-0" style= "margin-top: 8em">
+                <div class="container py-5 pt-lg-0">
+                    <div class="row gx-0">
+                        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                            <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                                <div class="ps-4">
+                                    <h5 class="text-white mb-0">Cộng sự trên toàn thế giới</h5>
+                                    <h1 class="text-white mb-0" data-toggle="counter-up">402600</h1>
                                 </div>
                             </div>
-                            <img src="./public/img/achievements/left-banner-image.jpg" alt="">
+                        </div>
+                        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                            <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                                <div class="ps-4">
+                                    <h5 class="text-primary mb-0">Nhà nghiên cứu và kỹ sư</h5>
+                                    <h1 class="mb-0" data-toggle="counter-up">76100</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                                <div class="ps-4">
+                                    <h5 class="text-white mb-0">Chi nhánh và công ty con</h5>
+                                    <h1 class="text-white mb-0" data-toggle="counter-up">440</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-				<div class="col-lg-6">
-					<div class="right-content">
-					<?php
-					foreach($result as $row) {
-						echo '
-						<div class="row"	>
-							<div class="col-lg-6">
-							<div class="right-first-image">
-								<div class="thumb">
-								<div class="inner-content">
-									<h4>Award</h4>
-									<span>' . $row["achievements_main_name"]. '</span>
-								</div>
-								<div class="hover-content">
-									<div class="inner">
-									<h4>' . $row["achievements_main_name"]. '</h4>
-									<p>' . $row["achievements_main_description"]. '</p>
-									<div class="main-border-button">
-										<a href="#">Discover More</a>
-									</div>
-									</div>
-								</div>
-								<img src="' . $row["achievements_main_src"]. '">
-								</div>
-							</div>
-							</div>
-						</div>
-						';
-					}
-						?>
-					</div>
-				</div>
-
             </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
-
-    <!-- ***** Men Area Starts ***** -->
-    <section class="section" id="awardB">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-heading">
-                        <h2>Awards & Accolades for Bosch Home Appliances</h2>
-                        <span>Bosch Home Appliances has won numerous awards for their innovative product design, energy efficiency, reliability, and cutting-edge technology.</span>
+            <div class="row g-5">
+            <div class="col-lg-12 wow slideInUp mx-5 my-5" data-wow-delay="0.9s">
+                    <div class="team-item bg-light rounded overflow-hidden" style="margin: 0em 20em">
+                        <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-01.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Partner of the Year Award!</h4>
+                                <p class="text-uppercase m-0">Bosch earns 2023 ENERGY STAR® Partner of the Year Award!</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-02.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">America’s Most Trusted®</h4>
+                            <p class="text-uppercase m-0">America’s Most Trusted® Kitchen Brand 5 Years in a Row 2019-2023*</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-03.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">IF Design Award</h4>
+                            <p class="text-uppercase m-0">Bosch Industrial-Style Range awarded 2022 IF Design Award</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-04.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Company of the Year</h4>
+                            <p class="text-uppercase m-0">Bosch Wins Connected Home Company of the Year Award.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-				<div class="awardB-item-carousel"><div class="owl-men-item owl-carousel">
-				<?php
-				foreach($result2 as $row2) {
-					echo '<div class="item">
-							<div class="thumb">
-							<div class="hover-content">
-								<a href="#">
-								<span style="background-color: #091E3E; color: white; padding: 3px 6px; font-size: 13px; font-weight: bold; border-radius: 3px;">
-									'.$row2["achievements_awards_description"].'
-								</span>
-								</a>
-							</div>
-							<img src="'.$row2["achievements_awards_src"].'" alt="">
-							</div>
-							<div style="text-align: center;">
-							<div class="down-content" style="display: inline-block; text-align: left;">
-								<h4>'.$row2["achievements_awards_name"].'</h4>
-							</div>
-							</div>
-						</div>';
-				}
-				echo '</div></div>';
-				?>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Men Area Ends ***** -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-</div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="./public/js/layouts/counterup/counterup.min.js"></script>
+    <script src="./public/js/layouts/main.js"></script>
+    </section><!-- End Portfolio Section -->
     <?php
-        include_once('views/main/footer.php');
+    include_once('views/main/footer.php');
     ?>
-
-    <!-- jQuery -->
-    <script src="./public/js/achievements/jquery-2.1.0.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="./public/js/achievements/popper.js"></script>
-    <script src="./public/js/achievements/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="./public/js/achievements/owl-carousel.js"></script>
-    <script src="./public/js/achievements/accordions.js"></script>
-    <script src="./public/js/achievements/datepicker.js"></script>
-    <script src="./public/js/achievements/scrollreveal.min.js"></script>
-    <script src="./public/js/achievements/waypoints.min.js"></script>
-    <script src="./public/js/achievements/jquery.counterup.min.js"></script>
-    <script src="./public/js/achievements/imgfix.min.js"></script> 
-    <script src="./public/js/achievements/slick.js"></script> 
-    <script src="./public/js/achievements/lightbox.js"></script> 
-    <script src="./public/js/achievements/isotope.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="./public/js/achievements/custom.js"></script>
-
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
-</body>
-
-</html>

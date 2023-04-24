@@ -67,7 +67,8 @@ include_once('views/main/navbar.php');
     <!-- ======= Contact Section ======= -->
     </section>
 
-
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
   </main><!-- End #main -->
 <?php
 include_once('views/main/footer.php');

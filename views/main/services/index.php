@@ -54,17 +54,8 @@ include_once('views/main/navbar.php');
           </div>';
           }
         ?>
-<!-- Card 1
-<div class="col" data-aos="zoom-in" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#exampleModal'.$product->id.'">
-                <div class="card h-100">
-                  <img src="' . $product->img . '" class="card-img-top" alt="..." style="width="300" height="300"";>
-                  <div class="card-body">
-                    <h5 class="card-title">' . $product->name .'</h5>
-                    <p class="card-text">' . $product->description .'</p>
-                  </div>
-                </div>
-              </div> -->
-
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
   </main><!-- End #main -->
 
 <?php

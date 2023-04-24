@@ -138,7 +138,7 @@
                         </div>
                         <h4 class="mb-3">Giải pháp mobility</h4>
                         <p class="m-0">Giải pháp truyền động điện cho phương tiện hai bánh</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <a class="btn btn-lg btn-primary rounded" href="index.php?page=main&controller=services&action=index">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -150,7 +150,7 @@
                         </div>
                         <h4 class="mb-3">Giải pháp mobility</h4>
                         <p class="m-0">Hệ thống điều khiển động cơ cho phương tiện hai bánh</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <a class="btn btn-lg btn-primary rounded" href="index.php?page=main&controller=services&action=index">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -162,7 +162,7 @@
                         </div>
                         <h4 class="mb-3">Giải pháp mobility</h4>
                         <p class="m-0">Hệ thống chống bó cứng phanh (ABS) cho xe gắn máy</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <a class="btn btn-lg btn-primary rounded" href="index.php?page=main&controller=services&action=index">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -174,7 +174,7 @@
                         </div>
                         <h4 class="mb-3">Giải pháp mobility</h4>
                         <p class="m-0">Two-wheelers and powersports</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <a class="btn btn-lg btn-primary rounded" href="index.php?page=main&controller=services&action=index">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -186,7 +186,7 @@
                         </div>
                         <h4 class="mb-3">Thiết bị gia dụng</h4>
                         <p class="m-0">Công nghệ hoàn hảo cho ngôi nhà và khu vườn của bạn</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <a class="btn btn-lg btn-primary rounded" href="index.php?page=main&controller=services&action=index">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -198,7 +198,7 @@
                         </div>
                         <h4 class="mb-3">Công nghiệp và thương mại</h4>
                         <p class="m-0">Bosch cung cấp các sản phẩm và dịch vụ tiên tiến cho công nghiệp và thương mại</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <a class="btn btn-lg btn-primary rounded" href="index.php?page=main&controller=services&action=index">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
