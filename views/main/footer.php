@@ -8,7 +8,7 @@
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
                                 <h3 class="text-light mb-0">Bosch Company</h3>
                             </div>
-                            <p>Bosch là một tập đoàn công nghệ đa quốc gia có trụ sở tại Đức, chuyên sản xuất và cung cấp các sản phẩm và dịch vụ trong các lĩnh vực kỹ thuật điện tử, công nghệ ô tô, công nghệ đóng gói, công nghệ năng lượng và công nghệ y tế.</p>
+                            <p>Bosch Company is a multinational corporation known for its innovative technology and engineering expertise in areas such as automotive, industrial, and consumer goods.</p>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
