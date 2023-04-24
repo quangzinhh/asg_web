@@ -98,8 +98,7 @@
 <?php
   include_once('views/main/footer.php');
 ?>
-</body>
-</html>
+
 
 
 

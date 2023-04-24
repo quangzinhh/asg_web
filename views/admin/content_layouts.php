@@ -37,7 +37,7 @@
 			</a></h3> -->
 
 			<a href="index.php?page=admin&controller=layouts&action=index" class="brand-link" >
-				<img class="brand-image" src="https://logos-download.com/wp-content/uploads/2016/03/Bosch-logo.png" alt="KMS Logo" style="opacity: .8">
+				<img class="brand-image" src="https://logos-download.com/wp-content/uploads/2016/03/Bosch-logo.png" alt="bosch Logo" style="opacity: .8">
 				<span class="brand-text font-weight-light" style="margin-left: 5px;"><strong></strong></span>
 			</a>
 			<!-- Sidebar-->
@@ -63,7 +63,7 @@
 					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 						<!--Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
 						<?php
-							if($_SESSION['init']==1){
+							if(isset($_SESSION['init'])){
 								echo '
 									<li class="nav-item">
 										<a class="nav-link" href="index.php?page=admin&controller=admin&action=index">
