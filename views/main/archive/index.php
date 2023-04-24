@@ -42,16 +42,10 @@
                     <div class="team-item bg-light rounded overflow-hidden" style="margin: 0em 20em">
                         <div class="team-img position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-01.jpg" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                </div>
                             </div>
                             <div class="text-center py-4">
                                 <h4 class="text-primary">Partner of the Year Award!</h4>
-                                <p class="text-uppercase m-0">Bosch earns 2023 ENERGY STAR® Partner of the Year Award!</p>
+                                <p class="text-uppercase m-1">Bosch earns 2023 ENERGY STAR® Partner of the Year Award!</p>
                             </div>
                         </div>
                     </div>
@@ -59,16 +53,10 @@
                     <div class="team-item bg-light rounded overflow-hidden">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-02.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">America’s Most Trusted®</h4>
-                            <p class="text-uppercase m-0">America’s Most Trusted® Kitchen Brand 5 Years in a Row 2019-2023*</p>
+                            <p class="text-uppercase m-1">America’s Most Trusted® Kitchen Brand 5 Years in a Row 2019-2023*</p>
                         </div>
                     </div>
                 </div>
@@ -76,16 +64,10 @@
                     <div class="team-item bg-light rounded overflow-hidden">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-03.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">IF Design Award</h4>
-                            <p class="text-uppercase m-0">Bosch Industrial-Style Range awarded 2022 IF Design Award</p>
+                            <p class="text-uppercase m-1">Bosch Industrial-Style Range awarded 2022 IF Design Award</p>
                         </div>
                     </div>
                 </div>
@@ -93,16 +75,10 @@
                     <div class="team-item bg-light rounded overflow-hidden">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="./public/img/achievements/baner-right-image-04.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Company of the Year</h4>
-                            <p class="text-uppercase m-0">Bosch Wins Connected Home Company of the Year Award.</p>
+                            <p class="text-uppercase m-1">Bosch Wins Connected Home Company of the Year Award.</p>
                         </div>
                     </div>
                 </div>
