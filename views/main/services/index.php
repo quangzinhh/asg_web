@@ -43,7 +43,7 @@ include_once('views/main/navbar.php');
               '<div class="col-md-4 wow slideInUp" data-wow-delay="0.6s">
               <div class="blog-item bg-light rounded overflow-hidden">
                   <div class="blog-img position-relative overflow-hidden" style="text-align: center;">
-                      <img class="img-fluid" src="' . $product->img . '" alt="" class="card-img-top" style="width: 10em; height: 10em;">
+                      <img class="img-fluid" src="' . $product->img . '" alt="" class="card-img-top" style="height: 10em;">
                   </div>
                   <div class="p-4">
                       <h4 class="mb-3">' . $product->name . '</h4>
