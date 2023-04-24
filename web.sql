@@ -94,8 +94,8 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
-(1, 'Chi nhánh TPHCM', '268 Lý Thường Kiệt, Phường 14, Quận 10, TPHCM', NULL, NULL),
-(2, 'Chi nhánh Đà Nẵng', 'Số 346, đường 2/9,\nQuận Hải Châu,\nThành phố Đà Nẵng', NULL, NULL);
+(1, 'Chi nhánh TPHCM', '33 Lê Duẩn, P. Bến Nghé, Q.1 TP. Hồ Chí Minh', NULL, NULL),
+(2, 'Chi nhánh Đà Nẵng', 'Tầng 3, Tòa nhà Indochina Riverside 74 Bạch Đằng, Đà Nẵng', NULL, NULL);
 
 -- --------------------------------------------------------
 
