@@ -79,6 +79,9 @@ $result2 = $conn->query($sql2);
 									<div class="inner">
 									<h4>' . $row["achievements_main_name"]. '</h4>
 									<p>' . $row["achievements_main_description"]. '</p>
+									<div class="main-border-button">
+										<a href="#">Discover More</a>
+									</div>
 									</div>
 								</div>
 								<img src="' . $row["achievements_main_src"]. '">

@@ -493,9 +493,3 @@ h6,
         background-color: #69b2ff;
     }
 }
-
-.navbar::after {
-    content: "";
-    display: block;
-    clear: both;
-}
