@@ -54,7 +54,7 @@
                             <div id="comment-' . $comment->id . '" class="comment">
                               <div class="d-flex">
                                 <div>
-                                  <h5><a href="">' . $comment->user_name . '</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                                  <h5><p style="font-weight: bold">' . $comment->user_name . '</p> </h5>
                                   <time>' . date("F j, Y, g:i a", strtotime($comment->date)) . '</time>
                                   <p>
                                   ' . $comment->content . '
@@ -62,39 +62,8 @@
                                 </div>
                               </div>
                             </div>';
-                              
-                            foreach ($comment->replies as $reply)
-                            {
-                              echo '
-                              <div id="comment-' . $comment->id . '-reply-' . $reply->id . '" class="comment comment-reply">
-                                <div class="d-flex">
-                                  <div>
-                                    <h5><a href="">' . $reply->user_name . '</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                                    <time>' . date("F j, Y, g:i a", strtotime($reply->date)) . '</time>
-                                    <p>
-                                    ' . $reply->content . '
-                                    </p>
-                                  </div>
-                                </div>
-  
-                              </div><!-- End comment reply #1-->
-                            ';
-                            }
-                            echo '
-                            <div class="row">
-                            <div class="col-lg-1"></div>
-                            <div class="reply-form col-lg-11">
-                              <div class="row">
-                                <div class="col form-group">
-                                  <textarea name="comment" class="form-control" placeholder="Viết bình luận tại đây"></textarea>
-                                </div>
-                              </div>
-                              <button style="background-color: primary; color: white;" class="btn btn-primary btn-reply mb-3" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
-                            </form>
-                          </div></div>';
                           }
-                            
-  
+
                           echo '
                           <div class="reply-form">
                             <h4>Bình luận</h4>

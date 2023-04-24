@@ -3,7 +3,7 @@
 	if (!isset($_SESSION["user"])) {
 		header("Location: index.php?page=admin&controller=login&action=index");
 	}
-	if ($_SESSION["init"]!=1) {
+	if (!isset($_SESSION["init"])) {
 		header("Location: index.php?page=admin&controller=layouts&action=index");
 	}
 ?>
