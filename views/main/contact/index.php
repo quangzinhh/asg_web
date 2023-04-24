@@ -16,36 +16,36 @@ include_once('views/main/navbar.php');
           {
             echo '
             <div class="row g-5 mb-5">
-                <div class="col-lg-4 py-5">
+                <div class="col-lg-4">
                     <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Phone</h5>
-                            <h4 class="text-primary mb-0">(84 28) 6258 3690</h4>
+                            <h5 class="text-primary mb-0">(84 28) 6258 3690</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 py-4">
+                <div class="col-lg-4">
                     <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-envelope-open text-white"></i>
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Email</h5>
-                            <h4 class="text-primary mb-0">bosch-infoteam@vn.bosch.com</h4>
+                            <h5 class="text-primary mb-0">bosch-infoteam@vn.bosch.com</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 px-5 py-4">
+                <div class="col-lg-4">
                     <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
                         <div class="ps-4">
                         <h5 class="mb-2">'. $company->name .'</h5>
-                            <h4 class="text-primary mb-0">' . $company->address . '</h4>
+                            <h5 class="text-primary mb-0">' . $company->address . '</h5>
                         </div>
                     </div>
                 </div>
