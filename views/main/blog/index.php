@@ -173,8 +173,8 @@
                 foreach ($recent as $news)
                 {
                   echo '
-                  <div class=" fw-semi-bold d-flex align-items-center bg-light px-3 py-3 my-3">
-                    <h4><a href="blog-single.html" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>' . $news->title . '</a></h4>
+                  <div class=" fw-semi-bold align-items-center bg-light px-3 py-3 my-3">
+                    <h5><a href="blog-single.html" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>' . $news->title . '</a></h5>
                     <time>' . date("F j, Y, g:i a", strtotime($news->date)) . '</time>
                   </div>
                   ';
