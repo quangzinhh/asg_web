@@ -7,17 +7,17 @@ include_once('views/main/navbar.php');
       foreach ($products as $product) {
         echo
         '<div class="modal fade" id="exampleModal'. $product->id .'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  style="padding-top: 5em">
-          <div class="modal-dialog modal-dialog-scrollable" style="max-width: 60%">
+          <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLabel">' . $product->name . '</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body" style="text-align: center">
-                  <img src="' . $product->img . '" class="card-img-top" alt="..." style="width: 30%; height=30%;">
+                  <img src="' . $product->img . '" class="card-img-top" alt="..." style="width: 80%; height=30%;">
                   <br></br>
                   <h4 class="card-text"><strong>' . $product->description . '</strong></h4>
-                  <p>' . $product->content . '</p>
+                  <p style="text-align: justify;">' . $product->content . '</p>
                 </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
